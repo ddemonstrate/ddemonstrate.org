@@ -3,15 +3,18 @@ Decentralized crowd funding for demonstrations.
 
 demonstrate.org || ddemonstrate.com
 
-## What
-ddemonstrate provide the engine via decentralized ethereum smart contracts.  This allows anyone to create or participate without revleaing any personal information. 
+## What?
+ddemonstrate provides an engine to create annoyums, censorship demonstrations via decentralized ethereum smart contracts.  This allows anyone to create or participate without revealing any personal information. 
 
-## Why
+## Why?
+
+
+## How
 * Blockchain based smart contracts means its censorship resistant.  There is no one central point of failure.
 * The source code is open source.  Feel free to clone, fork or make edits via pull requests.
 * no banks, credit cards or paypals
 * Annoymus
-* Secure.  We encourage all users to use PGP based email.  Our PGP key is avabile on GitHub and MIT server.
+* Secure.  We encourage all users to use PGP based email.  Our PGP key is avaliablle below and MIT server.
 
 ## How to add a campaign
 There are a number of ways you can add an event the smart contracts.
@@ -24,19 +27,21 @@ There are a number of ways you can add an event the smart contracts.
 
 ## How you can help
 * Fork this repo
-* Make contributions to this repo.
+* Make contributions to this repo
 * Dontate Bitcoin or Ethereum
+* Sponsor a campagin
+* Spread the word
 
 ## APIS
 
 
 ## Smart Contracts
-
+All our code is open source.
 
 ## Contact
 
-ddemonstrate@protonmail.com
-PGP Public Key | Fingerprint 9ee37e66bac184e4cd13ce73a33304a5545027ca
+We can be reached at `ddemonstrate@protonmail.com`
+PGP Public Key| Fingerprint `9ee37e66bac184e4cd13ce73a33304a5545027ca`
 
 ```-----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: OpenPGP.js v4.5.5
@@ -70,4 +75,4 @@ Kcz2FzMpL6uZwcv3lJImDj+otMgw1SoGHmne4r/gAIx1LwgHGnQzLbkMkoX6
 kMcsPD59bRmH16AB6cxRa7Ilc5L1YkdlVTeooAEwMMdzCqIi41HwXv8XVGHh
 clo/gTUql92J26bECUEhXF3WkyH8wf+gvrs7idHAf4JHRqM=
 =A4GG
------END PGP PUBLIC KEY BLOCK-----```
+-----END PGP PUBLIC KEY BLOCK-----
