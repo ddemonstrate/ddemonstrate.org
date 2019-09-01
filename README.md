@@ -17,7 +17,7 @@ Futhermore, participants who attend in person can earn crypto currency for their
 * Blockchain based smart contracts means its censorship resistant.  There is no one central point of failure.
 * The source code is open source.  Feel free to clone, fork or make edits via pull requests.
 * Crypto only. No banks, credit cards, Paypal or third parties.
-* Anonymous, no personal information is collected ever.
+* Anonymous, no personal information is ever collected.
 * Secure.  We encourage all users to use PGP based email.  Our PGP key is available below and MIT server.
 
 ## How to add a campaign
@@ -32,8 +32,8 @@ There are a number of ways you can add an event the smart contracts.
 ## How you can help
 * Fork this repo
 * Make contributions to this repo
-* Dontate Bitcoin or Ethereum
-* Sponsor a campagin
+* Donate Bitcoin or Ethereum
+* Sponsor a campaign
 * Spread the word
 
 ## APIS
