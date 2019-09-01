@@ -1,10 +1,14 @@
 # ddemonstrate
-Decentralized crowd funding for demonstrations.
+Decentralised crowd funding for demonstrations.
 
 demonstrate.org || ddemonstrate.com
 
 ## What?
-ddemonstrate provides an engine to create annoyums, censorship demonstrations via decentralized ethereum smart contracts.  This allows anyone to create or participate without revealing any personal information. 
+ddemonstrate provides a platform for anyone to create and co-ordinate anonymous, censorship demonstrations.  By using crypto currencies and the Ethereum blockchain, it allows safe and secure socialisation of demonstrations.
+
+The platform enables supporters of the cause who could not otherwise participate donate funds securely and anonymously without requiring third party banks or payment gateways who can reverse transactions or close accounts.
+
+Futhermore, participants who attend in person can earn crypto currency for their efforts.
 
 ## Why?
 
@@ -12,9 +16,9 @@ ddemonstrate provides an engine to create annoyums, censorship demonstrations vi
 ## How
 * Blockchain based smart contracts means its censorship resistant.  There is no one central point of failure.
 * The source code is open source.  Feel free to clone, fork or make edits via pull requests.
-* no banks, credit cards or paypals
-* Annoymus
-* Secure.  We encourage all users to use PGP based email.  Our PGP key is avaliablle below and MIT server.
+* Crypto only. No banks, credit cards, Paypal or third parties.
+* Anonymous, no personal information is collected ever.
+* Secure.  We encourage all users to use PGP based email.  Our PGP key is available below and MIT server.
 
 ## How to add a campaign
 There are a number of ways you can add an event the smart contracts.
