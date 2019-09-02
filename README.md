@@ -33,8 +33,8 @@ There are a number of ways you can add an event the smart contracts.
 * Fork this repo
 * Make contributions to this repo
 * Donate Bitcoin or Ethereum
-* Sponsor a campaign
-* Spread the word
+* Sponsor a campaign!
+* Spread the word!
 
 ## APIS
 
