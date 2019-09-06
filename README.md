@@ -1,16 +1,26 @@
 # ddemonstrate
-Decentralised crowd funding for demonstrations.
+Decentralised, anonymous crowdfunding for activism.
 
 demonstrate.org || ddemonstrate.com
 
 ## What?
-ddemonstrate provides a platform for anyone to create and co-ordinate anonymous, censorship demonstrations.  By using crypto currencies and the Ethereum blockchain, it allows safe and secure socialisation of demonstrations.
+ddemonstrate provides a platform for anyone to freely create and co-ordinate activist campaigns and to make anonymous financial
+contributions via cryptocurrency. By using cryptocurrencies and the Ethereum blockchain, it allows safe and secure socialisation of demonstrations.
 
-The platform enables supporters of the cause who could not otherwise participate donate funds securely and anonymously without requiring third party banks or payment gateways who can reverse transactions or close accounts.
+The platform enables supporters and contributors of the cause who could not otherwise participate, to donate funds securely and anonymously without requiring third party banks or payment gateways who can reverse transactions or close accounts.
 
-Futhermore, participants who attend in person can earn crypto currency for their efforts.
+Futhermore, participants who attend in person can earn cryptocurrency for their efforts.
 
 ## Why?
+Anonymous financial contributions to activism removes barriers and aids in campaigns by:
+•	Removing the risk of banks blocking payments, reversing transactions and closing accounts
+•	Removing the risk of damage to public reputation and profile
+•	Protecting the right to participate anonymously and pseudonymously in political discourse which is vital to any democracy
+•	Protecting opinion and belief
+•	Allowing people to avoid physical intimidation from those opposing their political views
+•	Ensuring contributors avoid employment risks
+•	Ensuring contributors avoid risks of personal threat
+•	maintaining privacy
 
 
 ## How
@@ -28,6 +38,8 @@ There are a number of ways you can add an event the smart contracts.
 ### Via our API (Intermediate)
 
 ### Via our website
+Listing a campaign is made simple by entering the title, purpose and category (e.g. animal rights, environmental) of your campaign as well as providing an image and your cryptocurrency wallet address. 
+
 
 ## How you can help
 * Fork this repo
