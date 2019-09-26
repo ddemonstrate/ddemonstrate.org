@@ -9,18 +9,19 @@ contributions via cryptocurrency. By using cryptocurrencies and the Ethereum blo
 
 The platform enables supporters and contributors of the cause who could not otherwise participate, to donate funds securely and anonymously without requiring third party banks or payment gateways who can reverse transactions or close accounts.
 
-Futhermore, participants who attend in person can earn cryptocurrency for their efforts.
+Furthermore, participants who attend in person can earn cryptocurrency for their efforts.
 
 ## Why?
 Anonymous financial contributions to activism removes barriers and aids in campaigns by:
-•	Removing the risk of banks blocking payments, reversing transactions and closing accounts
-•	Removing the risk of damage to public reputation and profile
-•	Protecting the right to participate anonymously and pseudonymously in political discourse which is vital to any democracy
-•	Protecting opinion and belief
-•	Allowing people to avoid physical intimidation from those opposing their political views
-•	Ensuring contributors avoid employment risks
-•	Ensuring contributors avoid risks of personal threat
-•	maintaining privacy
+
+•	Removing the risk of banks blocking payments, reversing transactions and closing accounts.
+•	Removing the risk of damage to public reputation and profile.
+•	Protecting the right to participate anonymously and pseudonymously in political discourse which is vital to any democracy.
+•	Protecting opinion and belief.
+•	Allowing people to avoid physical intimidation from those opposing their political views.
+•	Ensuring contributors avoid employment risks.
+•	Ensuring contributors avoid risks of personal threat.
+•	Maintaining privacy
 
 
 ## How
@@ -34,12 +35,12 @@ Anonymous financial contributions to activism removes barriers and aids in campa
 There are a number of ways you can add an event the smart contracts.
 
 ### Directly via the Smart Contract (Expert)
+The abi file is found in our GitHub repo `/build/`
 
 ### Via our API (Intermediate)
 
 ### Via our website
 Listing a campaign is made simple by entering the title, purpose and category (e.g. animal rights, environmental) of your campaign as well as providing an image and your cryptocurrency wallet address. 
-
 
 ## How you can help
 * Fork this repo
@@ -50,16 +51,18 @@ Listing a campaign is made simple by entering the title, purpose and category (e
 
 ## APIS
 
+`/campaign`
 
 ## Smart Contracts
-All our code is open source.
+All our code is open source under the MIT licence.
 
 ## Contact
 
-We can be reached at `ddemonstrate@protonmail.com`
+We can be reached at securely at `ddemonstrate@protonmail.com` usig PGP encrypted email.
 PGP Public Key| Fingerprint `9ee37e66bac184e4cd13ce73a33304a5545027ca`
 
-```-----BEGIN PGP PUBLIC KEY BLOCK-----
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: OpenPGP.js v4.5.5
 Comment: https://openpgpjs.org
 

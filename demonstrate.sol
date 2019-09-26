@@ -17,6 +17,7 @@ contract Demonstrate {
 
     constructor() public {
         owner = msg.sender;
+        fee = 0;
     }
 
     function add(uint256 _startTime, int256 _lat, int256 _long) public payable {
@@ -26,21 +27,21 @@ contract Demonstrate {
         emit NewDemonstration(demonstrations.length - 1);
     }
 
-    function fund(uint256 index) public payable {
-        require(demonstrations[index].owner != address(0), "Invalid demonstration");
-        demonstrations[index].funds += msg.value;
+    function fund(uint256 _index) public payable {
+        require(demonstrations[_index].owner != address(0), "Invalid demonstration");
+        demonstrations[_index].funds += msg.value;
     }
 
-    function checkIn(uint256 index) public {
-
-    }
-
-    function payout() public  {
+    function checkIn(uint256 _index) public onlyCampaignOwner() {
 
     }
 
-    modifier onlyCampaignOwner(uint256 index) {
-        require(demonstrations[index].owner == msg.sender, "Only owner");
+    function payout() public {
+
+    }
+
+    modifier onlyCampaignOwner(uint256 _index) {
+        require(demonstrations[_index].owner == msg.sender, "Only owner");
         _;
     }
 

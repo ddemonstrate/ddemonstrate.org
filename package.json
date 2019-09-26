@@ -1,0 +1,19 @@
+{
+  "name": "ddemonstrate.org",
+  "version": "1.0.0",
+  "description": "Decentralised, anonymous crowdfunding for activism.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dltxio/ddemonstrate.org.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dltxio/ddemonstrate.org/issues"
+  },
+  "homepage": "https://github.com/dltxio/ddemonstrate.org#readme"
+}
