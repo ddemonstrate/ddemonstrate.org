@@ -26,7 +26,7 @@ Anonymous financial contributions to activism removes barriers and aids in campa
 ## How
 * Blockchain based smart contracts means its censorship resistant.  There is no one central point of failure or company that can close the project.
 * The source code is open source.  Feel free to clone, fork or make edits via pull requests.
-* Crypto only. No banks, credit cards, Paypal or third parties.
+* Crypto only. No banks, credit cards, PayPal or third parties.
 * Anonymous, no personal information is ever collected.
 * Secure.  We encourage all users to use PGP based email.  Our PGP key is available below and MIT server.
 
