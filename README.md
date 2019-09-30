@@ -23,7 +23,6 @@ Anonymous financial contributions to activism removes barriers and aids in campa
 •	Ensuring contributors avoid risks of personal threat.
 •	Maintaining privacy
 
-
 ## How
 * Blockchain based smart contracts means its censorship resistant.  There is no one central point of failure.
 * The source code is open source.  Feel free to clone, fork or make edits via pull requests.
@@ -43,9 +42,9 @@ The abi file is found in our GitHub repo `/build/`
 Listing a campaign is made simple by entering the title, purpose and category (e.g. animal rights, environmental) of your campaign as well as providing an image and your cryptocurrency wallet address. 
 
 ## How you can help
-* Fork this repo
+* Fork this repo.
 * Make contributions to this repo
-* Donate Bitcoin or Ethereum
+* Donate Bitcoin to `bc1qejx6pwfcvya5z3q5h2cua5wffz0n8rey4th2q9` or Ethereum `0x9943d42D7a59a0abaE451130CcfC77d758da9cA0`
 * Sponsor a campaign!
 * Spread the word!
 
@@ -57,8 +56,8 @@ Listing a campaign is made simple by entering the title, purpose and category (e
 All our code is open source under the MIT licence.
 
 ## Contact
-
 We can be reached at securely at `ddemonstrate@protonmail.com` usig PGP encrypted email.
+Twitter: 
 PGP Public Key| Fingerprint `9ee37e66bac184e4cd13ce73a33304a5545027ca`
 
 ```
