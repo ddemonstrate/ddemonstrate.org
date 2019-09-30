@@ -14,14 +14,14 @@ Furthermore, participants who attend in person can earn cryptocurrency for their
 ## Why?
 Anonymous financial contributions to activism removes barriers and aids in campaigns by:
 
-•	Removing the risk of banks blocking payments, reversing transactions and closing accounts.
-•	Removing the risk of damage to public reputation and profile.
-•	Protecting the right to participate anonymously and pseudonymously in political discourse which is vital to any democracy.
-•	Protecting opinion and belief.
-•	Allowing people to avoid physical intimidation from those opposing their political views.
-•	Ensuring contributors avoid employment risks.
-•	Ensuring contributors avoid risks of personal threat.
-•	Maintaining privacy
+* Removing the risk of banks blocking payments, reversing transactions and closing accounts.
+* Removing the risk of damage to public reputation and profile.
+* Protecting the right to participate anonymously and pseudonymously in political discourse which is vital to any democracy.
+* Protecting opinion and belief.
+* Allowing people to avoid physical intimidation from those opposing their political views.
+* Ensuring contributors avoid employment risks.
+* Ensuring contributors avoid risks of personal threat.
+* Maintaining privacy.
 
 ## How
 * Blockchain based smart contracts means its censorship resistant.  There is no one central point of failure.
