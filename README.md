@@ -36,7 +36,15 @@ There are a number of ways you can add an event the smart contracts.
 ### Directly via the Smart Contract (Expert)
 The abi file is found in our GitHub repo `/build/`
 
+* Create the campagin
+* Donate
+
+
+
 ### Via our API (Intermediate)
+ddemonstrate host an open source API that interfaces with the ethruem smart contract using EthJs.  Feel free to use this api to make your integration easier (at the risk of centralisation).
+
+Alternativity you can fork and host the API yourself.
 
 ### Via our website
 Listing a campaign is made simple by entering the title, purpose and category (e.g. animal rights, environmental) of your campaign as well as providing an image and your cryptocurrency wallet address. 
