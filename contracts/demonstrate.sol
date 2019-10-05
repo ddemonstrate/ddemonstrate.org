@@ -7,8 +7,7 @@ contract Demonstrate {
 
     struct Demonstration {
         uint256 startTime;
-        int256 lat;
-        int256 long;
+        bytes32[] whatthreewords;
         uint256 funds;
         address owner;
     }
@@ -20,9 +19,10 @@ contract Demonstrate {
         fee = 0;
     }
 
-    function add(uint256 _startTime, int256 _lat, int256 _long) public payable {
+    function add(uint256 _startTime, bytes32 location1, bytes32 location2, bytes32 location3) public payable {
         require(msg.value >= fee, "Fee too low");
 
+        bytes32[] location = bytes32[3] { location1, location1, location1};
         demonstrations.push(Demonstration(_startTime, _lat, _long, 0, msg.sender));
         emit NewDemonstration(demonstrations.length - 1);
     }
@@ -32,7 +32,7 @@ contract Demonstrate {
         demonstrations[_index].funds += msg.value;
     }
 
-    function checkIn(uint256 _index) public onlyCampaignOwner() {
+    function claim(uint256 _index) public {
 
     }
 
