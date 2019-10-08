@@ -36,10 +36,9 @@ There are a number of ways you can add an event the smart contracts.
 ### Directly via the Smart Contract (Expert)
 The abi file is found in our GitHub repo `/build/`
 
-* Create the campagin
-* Donate
-
-
+* Create the campaign: (startTime, location) which returns a unique index id
+* Donate: add funds to the contract
+* Participate: receive portions of the donated funds with a uniqute Proof of Attendence code.
 
 ### Via our API (Intermediate)
 ddemonstrate host an open source API that interfaces with the ethruem smart contract using EthJs.  Feel free to use this api to make your integration easier (at the risk of centralisation).
