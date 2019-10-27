@@ -10,16 +10,18 @@ contract Demonstrate {
         bytes32[] whatthreewords;
         uint256 dontations;
         address owner;
+        bytes32 proofofattend;
     }
 
     Demonstration[] public demonstrations;
+    mapping(address => uint256) public claims;
 
     constructor() public {
         owner = msg.sender;
         fee = 0;
     }
 
-    function add(uint256 startTime, bytes32 location1, bytes32 location2, bytes32 location3) public payable {
+    function add(uint256 startTime, bytes32 location1, bytes32 location2, bytes32 location3, bytes32 poa) public payable returns (uint) {
         require(msg.value >= fee, "Fee too low.");
         require(startTime > now, "Campaigns need to be in the future.");
 
@@ -30,6 +32,8 @@ contract Demonstrate {
 
         demonstrations.push(Demonstration(startTime, location, msg.value - fee, msg.sender));
         emit NewDemonstration(demonstrations.length - 1);
+
+        return demonstrations.length - 1;
     }
 
     function donate(uint256 _index) public payable {
@@ -39,11 +43,12 @@ contract Demonstrate {
         emit DonationReceived(_index, msg.value);
     }
 
-    function claim(uint256 _index) public {
+    function claim(uint256 _index, bytes32 poa) public {
+        require(demonstrations[_index].startTime > now, "Must claim after event");
 
     }
 
-    function payout() public {
+    function payout(uint256 _index) public {
 
     }
 

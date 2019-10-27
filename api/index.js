@@ -1,8 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 
-
-
 app.get('/contract', async (req, res) => {
     const contract = getContract();
     const name = await contract.name();
