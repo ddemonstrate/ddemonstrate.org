@@ -1,7 +1,7 @@
 # ddemonstrate
 Decentralised, anonymous crowdfunding for activism.
 
-demonstrate.org || ddemonstrate.com
+demonstrate.org || ddemonstrate.com || ddemonstrate.eth
 
 ## What?
 ddemonstrate provides a platform for anyone to freely create and co-ordinate activist campaigns and to make anonymous financial
