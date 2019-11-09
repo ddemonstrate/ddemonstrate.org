@@ -102,6 +102,7 @@ kMcsPD59bRmH16AB6cxRa7Ilc5L1YkdlVTeooAEwMMdzCqIi41HwXv8XVGHh
 clo/gTUql92J26bECUEhXF3WkyH8wf+gvrs7idHAf4JHRqM=
 =A4GG
 -----END PGP PUBLIC KEY BLOCK-----
+```
 
 ## Licence
 All our code is open source under the MIT licence.
