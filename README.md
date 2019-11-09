@@ -46,7 +46,7 @@ ddemonstrate host an open source API that interfaces with the ethruem smart cont
 Alternativity you can fork and host the API yourself.
 
 ### Via our website
-Listing a campaign is made simple by entering the title, purpose and category (e.g. animal rights, environmental) of your campaign as well as providing an image and your cryptocurrency wallet address. 
+Listing a campaign is made simple by entering the title, purpose and category (e.g. animal rights, environmental) of your campaign as well as providing your ethereum address.  Locations are set using the "What 3 Words" service. https://what3words.com
 
 ## How you can help
 * Fork and clone this repo.  Cloning creates more local copies.
