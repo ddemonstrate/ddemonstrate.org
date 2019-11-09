@@ -60,7 +60,8 @@ Listing a campaign is made simple by entering the title, purpose and category (e
 `/campaign`
 
 ## Smart Contracts
-All our code is open source under the MIT licence.
+
+Code will be commited under the contracts repository.
 
 ## Contact
 We can be reached at securely at `ddemonstrate@protonmail.com` usig PGP encrypted email.
@@ -101,3 +102,6 @@ kMcsPD59bRmH16AB6cxRa7Ilc5L1YkdlVTeooAEwMMdzCqIi41HwXv8XVGHh
 clo/gTUql92J26bECUEhXF3WkyH8wf+gvrs7idHAf4JHRqM=
 =A4GG
 -----END PGP PUBLIC KEY BLOCK-----
+
+## Licence
+All our code is open source under the MIT licence.
