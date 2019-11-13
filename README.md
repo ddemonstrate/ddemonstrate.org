@@ -1,7 +1,7 @@
 # ddemonstrate
 Decentralised, anonymous crowdfunding for activism.
 
-demonstrate.org || ddemonstrate.com
+demonstrate.org || ddemonstrate.com || ddemonstrate.eth
 
 ## What?
 ddemonstrate provides a platform for anyone to freely create and co-ordinate activist campaigns and to make anonymous financial
@@ -36,10 +36,9 @@ There are a number of ways you can add an event the smart contracts.
 ### Directly via the Smart Contract (Expert)
 The abi file is found in our GitHub repo `/build/`
 
-* Create the campagin
-* Donate
-
-
+* Create the campaign: (startTime, location) which returns a unique index id
+* Donate: add funds to the contract
+* Participate: receive portions of the donated funds with a uniqute Proof of Attendence code.
 
 ### Via our API (Intermediate)
 ddemonstrate host an open source API that interfaces with the ethruem smart contract using EthJs.  Feel free to use this api to make your integration easier (at the risk of centralisation).
@@ -47,12 +46,12 @@ ddemonstrate host an open source API that interfaces with the ethruem smart cont
 Alternativity you can fork and host the API yourself.
 
 ### Via our website
-Listing a campaign is made simple by entering the title, purpose and category (e.g. animal rights, environmental) of your campaign as well as providing an image and your cryptocurrency wallet address. 
+Listing a campaign is made simple by entering the title, purpose and category (e.g. animal rights, environmental) of your campaign as well as providing your ethereum address.  Locations are set using the "What 3 Words" service. https://what3words.com
 
 ## How you can help
 * Fork and clone this repo.  Cloning creates more local copies.
 * Make contributions to this repo.
-* Donate Bitcoin to `bc1qejx6pwfcvya5z3q5h2cua5wffz0n8rey4th2q9` or Ethereum `0x9943d42D7a59a0abaE451130CcfC77d758da9cA0`
+* Donate Bitcoin to `bc1qejx6pwfcvya5z3q5h2cua5wffz0n8rey4th2q9` or Ethereum `0x9943d42D7a59a0abaE451130CcfC77d758da9cA0` | `ddemonstrate.eth`
 * Sponsor a campaign!
 * Spread the word!
 
@@ -61,7 +60,8 @@ Listing a campaign is made simple by entering the title, purpose and category (e
 `/campaign`
 
 ## Smart Contracts
-All our code is open source under the MIT licence.
+
+Code will be commited under the contracts repository.
 
 ## Contact
 We can be reached at securely at `ddemonstrate@protonmail.com` usig PGP encrypted email.
@@ -102,3 +102,7 @@ kMcsPD59bRmH16AB6cxRa7Ilc5L1YkdlVTeooAEwMMdzCqIi41HwXv8XVGHh
 clo/gTUql92J26bECUEhXF3WkyH8wf+gvrs7idHAf4JHRqM=
 =A4GG
 -----END PGP PUBLIC KEY BLOCK-----
+```
+
+## Licence
+All our code is open source under the MIT licence.
