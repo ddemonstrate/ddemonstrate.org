@@ -24,26 +24,5 @@ contract.only("Demonstrate", function(accounts) {
       console.log(actual);
       //assert.equal(Number(actual), 0, "Should be index 0");
     });
-
-    // it("Alice should not be a hodler", async function () {
-    //   const actual = await tokenInstance.isHodler(ALICE);
-    //   assert.isFalse(actual, "Should not be a hodler");
-    // });
-
-    // it.skip("Should add BOB to hodlers", async function () {
-    //   const actual = await tokenInstance.insertHodler(BOB);
-    //   console.log(actual);
-    //   assert.equal(Number(actual), 1, "Should have index of 1");
-    // });
-
-    // it("Should calc 0 interest", async function () {
-    //   const start = await tokenInstance._start();
-    //   console.log(Number(start));
-
-    //   const actual = await tokenInstance.calc(100, 0);
-    //   console.log(Number(actual));
-
-    //   assert.equal(actual.valueOf(), 0, "Should be 0");
-    // });
   });
 });

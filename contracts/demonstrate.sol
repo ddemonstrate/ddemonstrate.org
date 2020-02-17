@@ -1,4 +1,4 @@
-pragma solidity ^0.5.10;
+pragma solidity ^0.6.0;
 
 contract Demonstrate {
 
@@ -7,10 +7,10 @@ contract Demonstrate {
 
     struct Demonstration {
         uint256 startTime;
-        bytes32[] whatthreewords;
+        bytes32[] whatThreeWords;
         uint256 dontations;
         address owner;
-        bytes32 proofofattend;
+        bytes32 proofOfAttenance;
     }
 
     Demonstration[] public demonstrations;
