@@ -33,14 +33,13 @@ contract Demonstrate {
         emit DonationReceived(_index, msg.value);
     }
 
-    function payout(uint256 _index) public {
-        require(demonstrations[_index].owner == msg.sender, "Only owner");
+    function payout(uint256 _index) public payable onlyCampaignOnwner(_index) {
         uint256 amount = demonstrations[_index].donations;
         demonstrations[_index].donations = 0;
         demonstrations[_index].owner.transfer(amount);
     }
 
-    modifier onlyCampaigOnwner(uint256 _index) {
+    modifier onlyCampaignOnwner(uint256 _index) {
         require(demonstrations[_index].owner == msg.sender, "Only owner");
         _;
     }
