@@ -5,7 +5,7 @@ contract Demonstrate {
     struct Demonstration {
         uint256 startTime;
         bytes32[] whatThreeWords;
-        uint256 dontations;
+        uint256 donations;
         address owner;
     }
 
@@ -28,13 +28,16 @@ contract Demonstrate {
 
     function donate(uint256 _index) public payable {
         require(demonstrations[_index].owner != address(0), "Invalid demonstration");
-        demonstrations[_index].dontations += msg.value;
+        demonstrations[_index].donations += msg.value;
 
         emit DonationReceived(_index, msg.value);
     }
 
-    function payout(uint256 _index) public onlyCampaigOnwner(_index) {
-
+    function payout(uint256 _index) public {
+        require(demonstrations[_index].owner == msg.sender, "Only owner");
+        uint256 amount = demonstrations[_index].donations;
+        demonstrations[_index].donations = 0;
+        demonstrations[_index].owner.transfer(amount);
     }
 
     modifier onlyCampaigOnwner(uint256 _index) {

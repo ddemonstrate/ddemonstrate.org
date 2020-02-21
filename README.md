@@ -61,7 +61,7 @@ Listing a campaign is made simple by entering the title, purpose and category (e
 
 ## Smart Contracts
 
-Code will be commited under the contracts repository.
+Code will be commited under the contracts repository.  Testnet key `tragic near rocket across biology shop push dragon jazz detail differ say`
 
 ## Contact
 We can be reached at securely at `ddemonstrate@protonmail.com` usig PGP encrypted email.
