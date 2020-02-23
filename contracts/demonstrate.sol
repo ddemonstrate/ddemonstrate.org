@@ -36,7 +36,7 @@ contract Demonstrate {
     function payout(uint256 _index) public payable onlyCampaignOnwner(_index) {
         uint256 amount = demonstrations[_index].donations;
         demonstrations[_index].donations = 0;
-        demonstrations[_index].owner.transfer(amount);
+        msg.sender.transfer(amount);
     }
 
     modifier onlyCampaignOnwner(uint256 _index) {

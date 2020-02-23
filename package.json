@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dltxio/ddemonstrate.org/issues"
   },
-  "homepage": "https://github.com/dltxio/ddemonstrate.org#readme"
+  "homepage": "https://github.com/dltxio/ddemonstrate.org#readme",
+  "dependencies": {
+    "truffle": "^5.1.14"
+  }
 }
