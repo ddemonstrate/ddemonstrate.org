@@ -61,7 +61,15 @@ Listing a campaign is made simple by entering the title, purpose and category (e
 
 ## Smart Contracts
 
-Code will be commited under the contracts repository.  Testnet key `tragic near rocket across biology shop push dragon jazz detail differ say`
+Code will be commited under the `/contracts` directory.  Testnet key `tragic near rocket across biology shop push dragon jazz detail differ say`
+
+Ropsten: `0x70816BbF66E121836FDbCc821B48761B600CCf14`
+
+## Thanks
+Theme Name: DevFolio
+Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+Author: BootstrapMade.com
+Author URL: https://bootstrapmade.com
 
 ## Contact
 We can be reached at securely at `ddemonstrate@protonmail.com` usig PGP encrypted email.
