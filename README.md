@@ -63,7 +63,7 @@ Listing a campaign is made simple by entering the title, purpose and category (e
 
 Code will be commited under the `/contracts` directory.  Testnet key `tragic near rocket across biology shop push dragon jazz detail differ say`
 
-Ropsten: `0x70816BbF66E121836FDbCc821B48761B600CCf14`
+Ropsten: `0x24b6e8aa5adca2bb30fc3c28159b96755d6930e6`
 
 ## Thanks
 Theme Name: DevFolio

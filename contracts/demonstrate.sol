@@ -5,27 +5,35 @@ contract Demonstrate {
     struct Demonstration {
         string title;
         uint256 startTime;
-        bytes32[] whatThreeWords;
+        uint256 endTime;
+        string[] whatThreeWords;
         uint256 donations;
         address owner;
     }
 
+    struct Group {
+        string title;
+    }
+
     Demonstration[] public demonstrations;
+    Group[] public groups;
     //mapping(address => uint256) public claims;
 
-    function add(uint256 startTime, string memory title, bytes32 location1, bytes32 location2, bytes32 location3) public payable returns (uint) {
+    function add(uint256 startTime, uint256 endTime, string memory title, string memory location1, string memory location2, string memory location3) public payable returns (uint) {
         require(startTime > now, "Demonstrations need to be in the future.");
-
-        bytes32[] memory location = new bytes32[](3);
+        require(endTime > startTime, "End time must be after start time");
+        string[] memory location = new string[](3);
         location[0] = location1;
         location[1] = location2;
         location[2] = location3;
 
-        demonstrations.push(Demonstration(startTime, title, location, msg.value, msg.sender));
+        demonstrations.push(Demonstration(title, startTime, endTime, location, msg.value, msg.sender));
         emit NewDemonstration(demonstrations.length - 1);
 
         return demonstrations.length - 1;
     }
+
+
 
     function donate(uint256 _index) public payable {
         require(demonstrations[_index].owner != address(0), "Invalid demonstration");
