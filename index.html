@@ -457,5 +457,172 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.2.6/dist/web3.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var abi = [
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "groups",
+        "outputs": [
+          {
+            "name": "title",
+            "type": "string"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "demonstrations",
+        "outputs": [
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "startTime",
+            "type": "uint256"
+          },
+          {
+            "name": "endTime",
+            "type": "uint256"
+          },
+          {
+            "name": "donations",
+            "type": "uint256"
+          },
+          {
+            "name": "owner",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "name": "index",
+            "type": "uint256"
+          }
+        ],
+        "name": "NewDemonstration",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "name": "index",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "DonationReceived",
+        "type": "event"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "startTime",
+            "type": "uint256"
+          },
+          {
+            "name": "endTime",
+            "type": "uint256"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "location1",
+            "type": "string"
+          },
+          {
+            "name": "location2",
+            "type": "string"
+          },
+          {
+            "name": "location3",
+            "type": "string"
+          }
+        ],
+        "name": "add",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_index",
+            "type": "uint256"
+          }
+        ],
+        "name": "donate",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_index",
+            "type": "uint256"
+          }
+        ],
+        "name": "payout",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+      }
+    ];
+
+      var contractAddress = '0x24b6e8aa5adca2bb30fc3c28159b96755d6930e6';
+      var eth = new Eth(new Eth.HttpProvider('https://ropsten.infura.io/v3/eaf5e0b4a01042a48211762c8d4eec44'));
+
+      var contract = eth.contract(abi).at(contractAddress);
+
+      contract.demonstrations().then((result) => {
+        console.log(result);
+        //$('#totalSupply').text(result[0].toString() + ' dogs registered');
+      });
+    })
+  </script>
 </body>
 </html>
