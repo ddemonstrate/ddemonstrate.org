@@ -33,8 +33,6 @@ contract Demonstrate {
         return demonstrations.length - 1;
     }
 
-
-
     function donate(uint256 _index) public payable {
         require(demonstrations[_index].owner != address(0), "Invalid demonstration");
         demonstrations[_index].donations += msg.value;
