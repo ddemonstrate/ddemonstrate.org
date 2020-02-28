@@ -457,11 +457,12 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/web3@1.2.6/dist/web3.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ethjs@0.3.4/dist/ethjs.min.js"></script>
+  <script type="text/javascript" src="./js/eth/ethjs-abi.min.js"></script>
+  <!-- <script src="/js/eth/ethjs-abi.min.js"></script> -->
   <script>
     $(document).ready(function() {
-      var abi = [
-      {
+      const abi = [{
         "constant": true,
         "inputs": [
           {
@@ -610,17 +611,17 @@
         "payable": true,
         "stateMutability": "payable",
         "type": "function"
-      }
-    ];
+      }];
 
       var contractAddress = '0x24b6e8aa5adca2bb30fc3c28159b96755d6930e6';
       var eth = new Eth(new Eth.HttpProvider('https://ropsten.infura.io/v3/eaf5e0b4a01042a48211762c8d4eec44'));
 
       var contract = eth.contract(abi).at(contractAddress);
 
-      contract.demonstrations().then((result) => {
-        console.log(result);
-        //$('#totalSupply').text(result[0].toString() + ' dogs registered');
+      contract.demonstrations(0).then((result) => {
+        alert(result);
+      //   console.log(result);
+      //   //$('#totalSupply').text(result[0].toString() + ' dogs registered');
       });
     })
   </script>
