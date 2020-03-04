@@ -63,6 +63,9 @@ Listing a campaign is made simple by entering the title, purpose and category (e
 
 Code will be commited under the `/contracts` directory.  Testnet key `tragic near rocket across biology shop push dragon jazz detail differ say`
 
+m/44'/60'/0'/0
+Private key `0x600f003a6ed434917afbbc7f03f2edf86a19f72448e2e9d05917e73e502f6970`
+
 Rinkby: 
 Ropsten: `0x24b6e8aa5adca2bb30fc3c28159b96755d6930e6`
 
