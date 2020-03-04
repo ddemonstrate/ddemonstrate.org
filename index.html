@@ -452,7 +452,6 @@
   <script src="lib/lightbox/js/lightbox.min.js"></script>
   <script src="lib/typed/typed.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
@@ -613,15 +612,16 @@
         "type": "function"
       }];
 
-      var contractAddress = '0x24b6e8aa5adca2bb30fc3c28159b96755d6930e6';
-      var eth = new Eth(new Eth.HttpProvider('https://ropsten.infura.io/v3/eaf5e0b4a01042a48211762c8d4eec44'));
+      var contractAddress = '0xcc81477c4d0cfc31ad63bdd1dd052576b16cff3e'; //'0x24b6e8aa5adca2bb30fc3c28159b96755d6930e6';
+      //var eth = new Eth(new Eth.HttpProvider('https://ropsten.infura.io/v3/eaf5e0b4a01042a48211762c8d4eec44'));
+      var eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
       var contract = eth.contract(abi).at(contractAddress);
 
       contract.demonstrations(0).then((result) => {
-        //alert(result.address);
-      //   console.log(result);
-      //   //$('#totalSupply').text(result[0].toString() + ' dogs registered');
+        alert("Event " + result.title + " by " + result.owner);
+        //   console.log(result);
+        //   //$('#totalSupply').text(result[0].toString() + ' dogs registered');
       });
     })
   </script>

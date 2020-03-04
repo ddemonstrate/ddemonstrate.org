@@ -13,16 +13,16 @@ balance = web3.eth.getBalance(address)
 
 with open("demonstrate.abi.json", "r") as f:
     abi = json.load(f)
-    print(abi)
+    #print(abi)
     contract = web3.eth.contract(address=address, abi=abi)
 
-    demonstration = contract.functions.demonstrations(0).call()
+    demonstration = contract.functions.demonstrations(1).call()
     print(demonstration)
 
     #balance = erc20.functions.balanceOf(owner).call()
     #print(balance)
 
-    nonce = w3.eth.getTransactionCount(owner)
+    nonce = web3.eth.getTransactionCount(owner)
     print(nonce)
 
     # tx = contract.functions.add(1,2).buildTransaction({'chainId': 3,'gas': 70000,'gasPrice': w3.toWei('1', 'gwei'),'nonce': nonce})

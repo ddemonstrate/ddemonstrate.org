@@ -1,7 +1,7 @@
 pragma solidity ^0.5.10;
 
 contract Demonstrate {
-    
+
     struct Demonstration {
         string title;
         uint256 startTime;
