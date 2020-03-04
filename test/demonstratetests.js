@@ -20,13 +20,21 @@ contract.only("Demonstrate", function(accounts) {
   });
 
   describe("Campaign tests", () => {
-    it("should add new campaign", async function () {
+
+    beforeEach(async function() {
       const tx = await contractInstance.add(DEC_25_2020, DEC_26_2020, "test", WHAT_3_WORDS[0], WHAT_3_WORDS[1], WHAT_3_WORDS[2]);
       
-      const actual = await contractInstance.demonstrations(0);
-      console.log(actual);
+      //console.log(actual);
+    });
 
+    it("should add new demonstration", async function () {
+      const actual = await contractInstance.demonstrations(0);
       assert.equal(actual[0], "test", "Name should be test");
+    });
+
+    it("should get demonstration count", async function () {
+      const actual = await contractInstance.count();
+      assert.equal(Number(actual), 1, "Count should be 1");
     });
   });
 });
