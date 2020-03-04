@@ -6,7 +6,9 @@ contract Demonstrate {
         string title;
         uint256 startTime;
         uint256 endTime;
-        string[] whatThreeWords;
+        string whatThreeWords1;
+        string whatThreeWords2;
+        string whatThreeWords3;
         uint256 donations;
         address owner;
     }
@@ -22,12 +24,12 @@ contract Demonstrate {
     function add(uint256 startTime, uint256 endTime, string memory title, string memory location1, string memory location2, string memory location3) public payable returns (uint) {
         require(startTime > now, "Demonstrations need to be in the future.");
         require(endTime > startTime, "End time must be after start time");
-        string[] memory location = new string[](3);
-        location[0] = location1;
-        location[1] = location2;
-        location[2] = location3;
+        // string[] memory location = new string[](3);
+        // location[0] = location1;
+        // location[1] = location2;
+        // location[2] = location3;
 
-        demonstrations.push(Demonstration(title, startTime, endTime, location, msg.value, msg.sender));
+        demonstrations.push(Demonstration(title, startTime, endTime, location1, location2, location3, msg.value, msg.sender));
         emit NewDemonstration(demonstrations.length - 1);
 
         return demonstrations.length - 1;

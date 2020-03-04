@@ -5,7 +5,8 @@ const DEC_25_2020 = 1608897600;
 const DEC_26_2020 = 1608940800;
 
 //cover rails metro
-const WHAT_3_WORDS = ["0x636f766572", "0x7261696c73", "0x6d6574726f"];
+//const WHAT_3_WORDS = ["0x636f766572", "0x7261696c73", "0x6d6574726f"];
+const WHAT_3_WORDS = ["cover", "rails", "metro"];
 
 contract.only("Demonstrate", function(accounts) {
   const OWNER = accounts[0];
