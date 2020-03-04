@@ -11,9 +11,11 @@ owner = "0xa1138fccd5f8E126E8d779CF78a547517307559d"
 address = "0x23da3e3Cd9400B624169b76A87325e4E4F7bC0E0"
 balance = web3.eth.getBalance(address)
 
-with open("demonstrate.abi.json", "r") as f:
-    abi = json.load(f)
-    #print(abi)
+with open("build/contracts/Demonstrate.json", "r") as f:
+    _json = json.load(f)
+    #print(_json["abi"])
+    abi = _json["abi"]
+
     contract = web3.eth.contract(address=address, abi=abi)
 
     demonstration = contract.functions.demonstrations(1).call()
