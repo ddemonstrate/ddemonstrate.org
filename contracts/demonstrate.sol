@@ -21,6 +21,10 @@ contract Demonstrate {
     Group[] public groups;
     //mapping(address => uint256) public claims;
 
+    function count() public view returns(uint256) {
+        return demonstrations.length;
+    }
+
     function add(uint256 startTime, uint256 endTime, string memory title, string memory location1, string memory location2, string memory location3) public payable returns (uint) {
         require(startTime > now, "Demonstrations need to be in the future.");
         require(endTime > startTime, "End time must be after start time");
