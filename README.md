@@ -24,7 +24,7 @@ Anonymous financial contributions to activism removes barriers and aids in campa
 * Maintaining privacy.
 
 ## How
-* Blockchain based smart contracts means its censorship resistant.  There is no one central point of failure or company that can close the project.
+* Blockchain based smart contracts means it's censorship resistant.  There is no one central point of failure or company that can close the project.
 * The source code is open source.  Feel free to clone, fork or make edits via pull requests.
 * Crypto only. No banks, credit cards, PayPal or third parties.
 * Anonymous, no personal information is ever collected.
@@ -41,9 +41,9 @@ The abi file is found in our GitHub repo `/build/`
 * Participate: receive portions of the donated funds with a uniqute Proof of Attendence code.
 
 ### Via our API (Intermediate)
-ddemonstrate host an open source API that interfaces with the ethruem smart contract using EthJs.  Feel free to use this api to make your integration easier (at the risk of centralisation).
+ddemonstrate hosts an open source API that interfaces with the ethruem smart contract using EthJs.  Feel free to use this api to make your integration easier (at the risk of centralisation).
 
-Alternativity you can fork and host the API yourself.
+Alternatively you can fork and host the API yourself.
 
 ### Via our website
 Listing a campaign is made simple by entering the title, purpose and category (e.g. animal rights, environmental) of your campaign as well as providing your ethereum address.  Locations are set using the "What 3 Words" service. https://what3words.com
