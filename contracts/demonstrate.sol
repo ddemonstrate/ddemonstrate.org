@@ -39,7 +39,7 @@ contract Demonstrate {
         return demonstrations.length - 1;
     }
 
-    function remove(uint256 _index) public onlyCampaignOnwner(_index) {
+    function remove(uint256 _index) public onlyCampaignOwner(_index) {
         delete demonstrations[_index];
     }
 
@@ -50,13 +50,13 @@ contract Demonstrate {
         emit DonationReceived(_index, msg.value);
     }
 
-    function payout(uint256 _index) public payable onlyCampaignOnwner(_index) {
+    function payout(uint256 _index) public payable onlyCampaignOwner(_index) {
         uint256 amount = demonstrations[_index].donations;
         demonstrations[_index].donations = 0;
         msg.sender.transfer(amount);
     }
 
-    modifier onlyCampaignOnwner(uint256 _index) {
+    modifier onlyCampaignOwner(uint256 _index) {
         require(demonstrations[_index].owner == msg.sender, "Only owner");
         _;
     }
