@@ -3,9 +3,10 @@ import json
 
 #node_url = "https://ropsten.infura.io/v3/eaf5e0b4a01042a48211762c8d4eec44"
 
-## Rinkeby .105, Main .104
-node_url = "http://192.168.1.105:8545"
+## Rinkeby .105, Main .104, Ropsten .127 (Besu)
+#node_url = "http://192.168.1.105:8545"
 #node_url = "http://192.168.1.104:8545"
+node_url = "http://192.168.1.127:8545"
 web3 = Web3(Web3.HTTPProvider(node_url))
 
 print(web3.isConnected())
@@ -24,7 +25,7 @@ account = web3.eth.account.privateKeyToAccount(private_key)
 #https://ethereum.stackexchange.com/questions/71421/how-to-create-a-local-account-from-an-external-private-key-in-web3-py
 print(account.address)
 
-with open("build/contracts/Demonstrate.json", "r") as f:
+with open("build/contracts/HelloWorld.json", "r") as f:
     _json = json.load(f)
 
     abi = _json["abi"]
@@ -33,8 +34,8 @@ with open("build/contracts/Demonstrate.json", "r") as f:
     bytecode = _json["bytecode"]
     print(bytecode)
 
-    Ddemonstrate = web3.eth.contract(abi=abi, bytecode=bytecode)
-    #tx_hash = Ddemonstrate.constructor().transact()
+    Contract = web3.eth.contract(abi=abi, bytecode=bytecode)
+    tx_hash = Contract.constructor().transact()
 
     #signed_txn = web3.eth.account.signTransaction(mint_txn, private_key=private_key)
 
