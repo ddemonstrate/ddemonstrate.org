@@ -24,6 +24,10 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
+  <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="../node_modules/web3/dist/web3.js"></script>
+  <script type="module" src="../ddemo-list.js"></script>
+
   <!-- =======================================================
     Theme Name: DevFolio
     Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
@@ -398,6 +402,11 @@
                       mollitia inventore?
                       <a href="publickey.ddemonstrate@protonmail.com-2.asc">PGP Public Key</a> | Fingerprint 9ee37e66bac184e4cd13ce73a33304a5545027ca
                     </p>
+                    <p>
+                      <h1>Demonstration List</h1>
+                      <ddemo-list></ddemo-list>
+                    </p>
+
                     <ul class="list-ico">
                       <li><span class="ion-ios-location"></span> ddemonstrate.eth</li>
                       <li><span class="ion-email"></span> ddemonstrate@protonmail.com</li>
@@ -417,6 +426,7 @@
       </div>
     </div>
     <footer>
+
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -457,9 +467,10 @@
   <script src="js/main.js"></script>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ethjs@0.3.4/dist/ethjs.min.js"></script>
-  <script type="text/javascript" src="./js/eth/ethjs-abi.min.js"></script>
-  <!-- <script src="/js/eth/ethjs-abi.min.js"></script> -->
-  <script>
+  <script type="text/javascript" src="lib/eth/ethjs-abi.min.js"></script>
+
+  <!-- <script src="/js/  eth/ethjs-abi.min.js"></script> -->
+  <!--script>
     $(document).ready(function() {
       const abi = [{
         "constant": true,
@@ -624,6 +635,6 @@
         //   //$('#totalSupply').text(result[0].toString() + ' dogs registered');
       });
     })
-  </script>
+  </script-->
 </body>
 </html>
