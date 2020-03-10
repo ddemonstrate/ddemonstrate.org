@@ -1,5 +1,5 @@
-import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import '@polymer/iron-list'
+import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
+import '@polymer/polymer/lib/elements/dom-repeat.js';
 
 /**
  * `ddemo-list`
@@ -13,7 +13,6 @@ class DdemoList extends PolymerElement {
 
   constructor() {
     super();
-    console.log("*** constructor()")
 
     this.web3 = new Web3("http://127.0.0.1:7545");
     this.contractReader = new this.web3.eth.Contract(abi, "0xca73a7d5Af7FB4673E6a7D9ad4c64D9ecCa585B9");
@@ -28,59 +27,91 @@ class DdemoList extends PolymerElement {
 
   static get template() {
     return html`
-      <style>
-        :host {
-          display: block;
-        }
-      </style>
-      <h2>Hello [[prop1]] [[count]]!</h2>
-      <ul>
-        <iron-list items="[[items]]">
-          <template>
-            <li>
-              <ul>
-                <li>[[item.title]]</li>
-                <li>[[item.startTime]]</li>
-                <li>[[item.endTime]]<li>
-              </ul>
-            </li>
+    <link rel="stylesheet" href="https://ddemonstrate.org/css/style.css"></link>
+    <style>
+      h5 {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+      .dd-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        background-color: #f5f5f5   
+      }
+      .dd-item {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 40%;
+        box-shadow: 0px 4px 4px #E9E9E9;
+        background-color: white;
+        padding: 1em;
+        margin: 1em;
+      }
+    </style>
+      <div class="dd-container">
+          <template is="dom-repeat" items="{{ddemos}}">
+            <div class="dd-item">
+              <h3>[[item.title]]</h3>
+              <div class="section startTime">
+              Starts at [[item.startTimeStr]]
+              </div>
+              <div class="section donations">
+                <h5>Donations</h5>
+                [[item.donations]] ETH
+              </div>
+              <div class="section owner">
+                <h5>Owner</h5>
+                [[item.owner]]
+              </div>
+              <div class="section location">
+                <h5>Location</h5>
+                <a href="[[item.whatThreeWordsUrl]]">[[item.whatThreeWords1]] [[item.whatThreeWords2]] [[item.whatThreeWords3]]</a>
+              <div>
+
+            <div>
           </template>
-        </iron-list>
-      </ul>
+
+      </div>
     `;
   }
   static get properties() {
     return {
-      prop1: {
-        type: String,
-        value: 'ddemo-list',
-      },
       count: {
         type: Number,
         value: -1
       },
-      items: {
+      ddemos: {
         type: Array,
-        value: []
+        value() {
+          return [];
+        }
       }
     };
   }
 
 
   async demoList() {
-    this.count = parseInt(await this.contractReader.methods.count().call(), 10);
+    this.count = 5;// parseInt(await this.contractReader.methods.count().call(), 10);
 
     let _items = [];
     for (let i=0; i<this.count; i++) {
-      let item = await this.contractReader.methods.demonstrations(i).call();
+      let item = await this.contractReader.methods.demonstrations(0).call();
+      item.startTimeStr = this._timestampToStr(item.startTime)
+      item.whatThreeWordsUrl = `https://w3w.co/${item.whatThreeWords1}.${item.whatThreeWords2}.${item.whatThreeWords3}`
       _items.push(item);
     }
-    this.items = _items;
-    console.log(_items);
-    return _items;
+    this.ddemos = _items;
+    return _items; 
   }
 
+  _timestampToStr(ts) {
+    return Date(ts).toString()
+  }
+  
 }
+
+
 const abi =
 [
 	{
