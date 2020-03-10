@@ -2,7 +2,7 @@
   "name": "ddemonstrate.org",
   "version": "1.0.0",
   "description": "Decentralised, anonymous crowdfunding for activism.",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,13 +10,24 @@
     "type": "git",
     "url": "git+https://github.com/dltxio/ddemonstrate.org.git"
   },
-  "author": "",
+  "author": "ddemonstrate.org",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dltxio/ddemonstrate.org/issues"
   },
   "homepage": "https://github.com/dltxio/ddemonstrate.org#readme",
   "dependencies": {
-    "truffle": "^5.1.14"
+    "@polymer/polymer": "3.3.1",
+    "bootstrap": "4.4.1",
+    "truffle": "^5.1.14",
+    "web3": "^1.2.6"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "polymer-cli": "^1.9.11",
+    "serve": "^11.3.0",
+    "wct-mocha": "^1.0.1"
   }
 }
