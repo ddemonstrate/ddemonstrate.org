@@ -17,18 +17,17 @@
   },
   "homepage": "https://github.com/dltxio/ddemonstrate.org#readme",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0",
+    "@polymer/polymer": "3.3.1",
+    "bootstrap": "4.4.1",
     "truffle": "^5.1.14",
     "web3": "^1.2.6"
   },
   "devDependencies": {
-    "@polymer/iron-demo-helpers": "^3.1.0",
-    "@polymer/iron-list": "^3.1.0",
-    "@polymer/test-fixture": "^4.0.2",
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "polymer-cli": "^1.9.11",
+    "serve": "^11.3.0",
     "wct-mocha": "^1.0.1"
   }
 }

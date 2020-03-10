@@ -4,5 +4,9 @@
     "rules": [
       "polymer-3"
     ]
-  }
+  },
+  "extraDependencies": [
+    "img/**",
+    "lib/**"
+  ]
 }

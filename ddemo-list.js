@@ -1,4 +1,4 @@
-import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
+import {PolymerElement, html} from '@polymer/polymer/polymer-element.js'
 import '@polymer/polymer/lib/elements/dom-repeat.js';
 
 /**
@@ -14,14 +14,12 @@ class DdemoList extends PolymerElement {
   constructor() {
     super();
 
-    this.web3 = new Web3("http://127.0.0.1:7545");
-    this.contractReader = new this.web3.eth.Contract(abi, "0xca73a7d5Af7FB4673E6a7D9ad4c64D9ecCa585B9");
-
   }
 
   async ready() {
     super.ready();
-  
+    this.web3 = new Web3(this.web3host);
+    this.contractReader = new this.web3.eth.Contract(abi, this.contract); 
     this.demoList();
   } 
 
@@ -29,6 +27,9 @@ class DdemoList extends PolymerElement {
     return html`
     <link rel="stylesheet" href="https://ddemonstrate.org/css/style.css"></link>
     <style>
+      h3 {
+        margin-top: 0px;
+      }
       h5 {
         padding-bottom: 0px;
         margin-bottom: 0px;
@@ -86,17 +87,27 @@ class DdemoList extends PolymerElement {
         value() {
           return [];
         }
+      },
+      web3host: {
+        type: String,
+        notify: true
+        //value: "http://127.0.0.1:7545"
+      },
+      contract: {
+        type: String,
+        notify: true
+        //value: "0xca73a7d5Af7FB4673E6a7D9ad4c64D9ecCa585B9"
       }
     };
   }
 
 
   async demoList() {
-    this.count = 5;// parseInt(await this.contractReader.methods.count().call(), 10);
+    this.count = parseInt(await this.contractReader.methods.count().call(), 10);
 
     let _items = [];
     for (let i=0; i<this.count; i++) {
-      let item = await this.contractReader.methods.demonstrations(0).call();
+      let item = await this.contractReader.methods.demonstrations(i).call();
       item.startTimeStr = this._timestampToStr(item.startTime)
       item.whatThreeWordsUrl = `https://w3w.co/${item.whatThreeWords1}.${item.whatThreeWords2}.${item.whatThreeWords3}`
       _items.push(item);
@@ -110,7 +121,6 @@ class DdemoList extends PolymerElement {
   }
   
 }
-
 
 const abi =
 [
