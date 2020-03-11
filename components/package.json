@@ -1,0 +1,14 @@
+{
+  "name": "ddemo-list",
+  "description": "ddemo-list",
+  "main": "ddemo-list.js",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "wct-mocha": "^1.0.1"
+  }
+}
