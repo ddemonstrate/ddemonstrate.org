@@ -13,6 +13,7 @@
 
   <!-- Bootstrap CSS File -->
   <!--link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"-->
+
   <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
@@ -25,9 +26,12 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
+  <!-- JS to be loaded early -->
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/webcomponentsjs/webcomponents-loader.js"></script>
   <script src="lib/web3/web3.js"></script>
-  <script type="module" src="ddemo-list.js"></script>
+  <script type="module" src="components/build/default/ddemo-list.js"></script>
 
   <!-- =======================================================
     Theme Name: DevFolio
@@ -306,7 +310,6 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/popper/popper.min.js"></script>
   <!--script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script-->
   <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>

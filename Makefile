@@ -2,7 +2,7 @@
 
 build:
 	npm install
-	polymer build
+	cd components && npm install && polymer build
 
 serve:
-	serve ./build/default
+	serve .
