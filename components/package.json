@@ -3,7 +3,14 @@
   "description": "ddemo-list",
   "main": "ddemo-list.js",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0"
+    "@fooloomanzoo/datetime-picker": "^3.0.9",
+    "@polymer/neon-animation": "^3.0.1",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-dialog": "^3.0.1",
+    "@polymer/paper-input": "^3.2.0",
+    "@polymer/paper-styles": "^3.0.1",
+    "@polymer/polymer": "^3.0.0",
+    "web-animations-js": "^2.3.2"
   },
   "devDependencies": {
     "@webcomponents/webcomponentsjs": "^2.0.0",
