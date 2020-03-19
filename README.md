@@ -50,14 +50,17 @@ Listing a campaign is made simple by entering the title, purpose and category (e
 
 ## How you can help
 * Fork and clone this repo.  Cloning creates more local copies.
-* Make contributions to this repo.
+* Make contributions to this repo.  See "for developers"
 * Donate Bitcoin to `bc1qejx6pwfcvya5z3q5h2cua5wffz0n8rey4th2q9` or Ethereum `0x9943d42D7a59a0abaE451130CcfC77d758da9cA0` | `ddemonstrate.eth`
 * Sponsor a campaign!
 * Spread the word!
 
-## APIS
+## For developers
 
-`/campaign`
+```
+git clone https://github.com/ddemonstrate/ddemonstrate.org.git
+make build
+```
 
 ## Smart Contracts
 
