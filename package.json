@@ -18,6 +18,7 @@
   "homepage": "https://github.com/dltxio/ddemonstrate.org#readme",
   "dependencies": {},
   "devDependencies": {
+    "polymer-cli": "^1.9.11",
     "serve": "^11.3.0"
   }
 }
