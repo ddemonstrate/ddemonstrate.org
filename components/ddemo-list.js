@@ -24,56 +24,54 @@ class DdemoList extends PolymerElement {
 
   static get template() {
     return html`
-    <link rel="stylesheet" href="https://ddemonstrate.org/css/style.css"></link>
-    <style>
-      h3 {
-        margin-top: 0px;
-      }
-      h5 {
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-      }
-      .dd-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; 
-        background-color: #f5f5f5   
-      }
-      .dd-item {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 40%;
-        box-shadow: 0px 4px 4px #E9E9E9;
-        background-color: white;
-        padding: 1em;
-        margin: 1em;
-      }
-    </style>
-      <div class="dd-container">
-          <template is="dom-repeat" items="{{ddemos}}">
-            <div class="dd-item">
-              <h3>[[item.title]]</h3>
-              <div class="section startTime">
-              Starts at [[item.startTimeStr]]
-              </div>
-              <div class="section donations">
-                <h5>Donations</h5>
-                [[item.donations]] ETH
-              </div>
-              <div class="section owner">
-                <h5>Owner</h5>
-                [[item.owner]]
-              </div>
-              <div class="section location">
-                <h5>Location</h5>
-                <a href="[[item.whatThreeWordsUrl]]">[[item.whatThreeWords1]] [[item.whatThreeWords2]] [[item.whatThreeWords3]]</a>
-              <div>
-
-            <div>
-          </template>
-
-      </div>
-    `;
+			<link rel="stylesheet" href="https://ddemonstrate.org/css/style.css"></link>
+			<style>
+				h3 {
+					margin-top: 0px;
+				}
+				h5 {
+					padding-bottom: 0px;
+					margin-bottom: 0px;
+				}
+				.dd-container {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap; 
+					background-color: #f5f5f5   
+				}
+				.dd-item {
+					display: flex;
+					flex-direction: column;
+					flex-basis: 40%;
+					box-shadow: 0px 4px 4px #E9E9E9;
+					background-color: white;
+					padding: 1em;
+					margin: 1em;
+				}
+			</style>
+			<div class="dd-container">
+				<template is="dom-repeat" items="{{ddemos}}">
+					<div class="dd-item">
+						<h3>[[item.title]]</h3>
+						<div class="section startTime">
+						Starts at [[item.startTimeStr]]
+						</div>
+						<div class="section donations">
+							<h5>Donations</h5>
+							[[item.donations]] ETH
+						</div>
+						<div class="section owner">
+							<h5>Owner</h5>
+							[[item.owner]]
+						</div>
+						<div class="section location">
+							<h5>Location</h5>
+							<a href="[[item.whatThreeWordsUrl]]">[[item.whatThreeWords1]] [[item.whatThreeWords2]] [[item.whatThreeWords3]]</a>
+						<div>
+					<div>
+				</template>
+			</div>
+		`;
   }
   static get properties() {
     return {
