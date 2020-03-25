@@ -1,6 +1,8 @@
 import {PolymerElement, html} from '@polymer/polymer/polymer-element.js'
 import '@polymer/polymer/lib/elements/dom-repeat.js';
 
+import _abi from '../build/';
+
 /**
  * `ddemo-list`
  * List of ddemonstrate events
@@ -9,7 +11,7 @@ import '@polymer/polymer/lib/elements/dom-repeat.js';
  * @polymer
  * @demo demo/index.html
  */
-class DdemoList extends PolymerElement {
+class Stats extends PolymerElement {
 
   constructor() {
     super();
@@ -19,7 +21,7 @@ class DdemoList extends PolymerElement {
     super.ready();
     this.web3 = new Web3(this.web3host);
     this.contractReader = new this.web3.eth.Contract(abi, this.contract); 
-    this.demoList();
+    this.stats();
   } 
 
   static get template() {
@@ -49,30 +51,46 @@ class DdemoList extends PolymerElement {
 					margin: 1em;
 				}
 			</style>
-			<div class="dd-container">
-				<template is="dom-repeat" items="{{ddemos}}">
-					<div class="dd-item">
-						<h3>[[item.title]]</h3>
-						<div class="section startTime">
-						Starts at [[item.startTimeStr]]
-						</div>
-						<div class="section donations">
-							<h5>Donations</h5>
-							[[item.donations]] ETH
-						</div>
-						<div class="section owner">
-							<h5>Owner</h5>
-							[[item.owner]]
-						</div>
-						<div class="section location">
-							<h5>Location</h5>
-							<a href="[[item.whatThreeWordsUrl]]">[[item.whatThreeWords1]] [[item.whatThreeWords2]] [[item.whatThreeWords3]]</a>
-						<div>
-					<div>
-				</template>
+			<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-lg-3">
+				<div class="counter-box counter-box pt-4 pt-md-0">
+					<div class="counter-ico">
+					<span class="ico-circle"><i class="ion-calendar"></i></span>
+					</div>
+					<div class="counter-num">
+					<p class="counter">450</p>
+					<span class="counter-text">EVENTS ADDED</span>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-3 col-lg-3">
+				<div class="counter-box pt-4 pt-md-0">
+					<div class="counter-ico">
+					<span class="ico-circle"><i class="ion-cash"></i></span>
+					</div>
+					<div class="counter-num">
+					<p class="counter">550</p>
+					<span class="counter-text">ETH RAISED</span>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-3 col-lg-3">
+				<div class="counter-box pt-4 pt-md-0">
+					<div class="counter-ico">
+					<span class="ico-circle"><i class="ion-ios-people"></i></span>
+					</div>
+					<div class="counter-num">
+					<p class="counter">36</p>
+					<span class="counter-text">POAP ADDED</span>
+					</div>
+				</div>
+				</div>
+			</div>
 			</div>
 		`;
   }
+
   static get properties() {
     return {
       count: {
@@ -87,36 +105,21 @@ class DdemoList extends PolymerElement {
       },
       web3host: {
         type: String,
-        notify: true
-        //value: "http://127.0.0.1:7545"
+        notify: true,
+		//value: "http://127.0.0.1:7545"
+		value: "https://ropsten.infura.io/v3/eaf5e0b4a01042a48211762c8d4eec44"
       },
       contract: {
         type: String,
-        notify: true
-        //value: "0xca73a7d5Af7FB4673E6a7D9ad4c64D9ecCa585B9"
+        notify: true,
+        value: "0x24b6e8aa5adca2bb30fc3c28159b96755d6930e6"
       }
     };
   }
 
-
-  async demoList() {
+  async stats() {
     this.count = parseInt(await this.contractReader.methods.count().call(), 10);
-
-    let _items = [];
-    for (let i=0; i<this.count; i++) {
-      let item = await this.contractReader.methods.demonstrations(i).call();
-      item.startTimeStr = this._timestampToStr(item.startTime)
-      item.whatThreeWordsUrl = `https://w3w.co/${item.whatThreeWords1}.${item.whatThreeWords2}.${item.whatThreeWords3}`
-      _items.push(item);
-    }
-    this.ddemos = _items;
-    return _items; 
   }
-
-  _timestampToStr(ts) {
-    return Date(ts).toString()
-  }
-  
 }
 
 const abi =
@@ -338,4 +341,4 @@ const abi =
 	}
 ]
 
-window.customElements.define('ddemo-list', DdemoList);
+window.customElements.define('stats', Stats);
