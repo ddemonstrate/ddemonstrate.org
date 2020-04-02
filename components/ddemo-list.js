@@ -87,8 +87,9 @@ class DdemoList extends PolymerElement {
       },
       web3host: {
         type: String,
-        notify: true
-        //value: "http://127.0.0.1:7545"
+        notify: true,
+		//value: "http://127.0.0.1:7545"
+		value: "https://ropsten.infura.io/v3/eaf5e0b4a01042a48211762c8d4eec44"
       },
       contract: {
         type: String,
