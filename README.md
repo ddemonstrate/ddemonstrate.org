@@ -80,6 +80,7 @@ Theme Name: DevFolio
 Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
 Author: BootstrapMade.com
 Author URL: https://bootstrapmade.com
+POAP:  https://gitcoin.co/grants/490/poap-proof-of-attendance-protocol
 
 ## Contact
 We can be reached at securely at `ddemonstrate@protonmail.com` usig PGP encrypted email.
