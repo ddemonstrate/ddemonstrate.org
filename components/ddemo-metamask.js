@@ -19,13 +19,12 @@ class DdemoMetamask extends PolymerElement {
 		super();
 	}
 
-	async ready() {
-		super.ready();
-		this.web3 = new Web3(this.web3host);
-    }
+    async ready() {
+        super.ready();
+    } 
     
     async connect() {
-        console.log("window.ethereum =", window.ethereum);
+        console.log("window.ethereum =", ethereum);
         let accounts = await ethereum.enable();
         if (accounts.length > 0) {
             this.account = accounts[0];
