@@ -1,6 +1,5 @@
-//var HDWalletProvider = require("truffle-hdwallet-provider");
-
-//var mnemonic = "tragic near rocket across biology shop push dragon jazz detail differ say";
+//const HDWalletProvider = require("truffle-hdwallet-provider");
+//const mnemonic = "tragic near rocket across biology shop push dragon jazz detail differ say";
 
 module.exports = {
 
