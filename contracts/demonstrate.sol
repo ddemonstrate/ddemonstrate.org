@@ -1,21 +1,22 @@
-pragma solidity ^0.5.10;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.7.0;
+
+struct Demonstration {
+    string title;
+    uint256 startTime;
+    uint256 endTime;
+    string whatThreeWords1;
+    string whatThreeWords2;
+    string whatThreeWords3;
+    uint256 donations;
+    address owner;
+}
+
+struct Group {
+    string title;
+}
 
 contract Demonstrate {
-
-    struct Demonstration {
-        string title;
-        uint256 startTime;
-        uint256 endTime;
-        string whatThreeWords1;
-        string whatThreeWords2;
-        string whatThreeWords3;
-        uint256 donations;
-        address owner;
-    }
-
-    struct Group {
-        string title;
-    }
 
     Demonstration[] public demonstrations;
     Group[] public groups;
@@ -26,7 +27,7 @@ contract Demonstrate {
     }
 
     function add(uint256 startTime, uint256 endTime, string memory title, string memory location1, string memory location2, string memory location3) public payable returns (uint) {
-        require(startTime > now, "Demonstrations need to be in the future.");
+        require(startTime > block.timestamp, "Demonstrations need to be in the future.");
         require(endTime > startTime, "End time must be after start time");
         // string[] memory location = new string[](3);
         // location[0] = location1;
